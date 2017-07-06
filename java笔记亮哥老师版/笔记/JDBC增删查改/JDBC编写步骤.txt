@@ -1,0 +1,6 @@
+1. 先获取连接对象
+2. 从连接对象中获取Statement或者PreparedStatement对象用户发送和执行sql语句
+3. 如果有参数，那么久设置参数
+4. 执行sql，查询调用executeQuery()方法，增删改使用executeUpdate()方法
+5. 如果有结果集，则使用ResultSet对象进行操作，获取表中的每一列数据
+6. 关闭数据库资源

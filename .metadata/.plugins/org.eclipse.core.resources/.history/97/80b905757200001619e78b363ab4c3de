@@ -1,0 +1,17 @@
+package com.test.exceptionTest;
+
+public class Test3 {
+	
+	public static void main(String[] args) {
+		
+	}
+	
+	public static void  f(){
+		
+		
+		throw new Exception("自己产生的异常....");
+		
+		
+	}
+
+}

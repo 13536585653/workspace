@@ -1,0 +1,56 @@
+1.EncodingFilter字符编码过滤器
+
+2. SessionCheck   session检查过滤器
+ 检查/cart/*   
+ 
+3.  ShopListener 监听器
+  当容器启动时，初始化商品列表productList，并存入ctx中
+  
+4. loginServlet
+  收到登录名name，存入session中
+  
+5. indexServlet 
+   从ctx中取得商品列表productList显示在页面上
+   
+6.  addCart
+ 获得用户提交的商品编号,从商品列表中查到商品,
+ 组成购物项cartItem。加入购物车cartMap ,
+ 把购物车cartMap 存入session
+ 再重定向到showCart
+ 
+7. showCart
+  从 session里，获得购物车列表cartMap，显示在页面上
+  
+8. delCart
+获得要删除的商品编号，
+从session里获得购物车cartMap
+从cartMap 删除某商品。
+再将cartMap存入session。
+ 再重定向到showCart
+
+
+
+
+Map:
+ {"1001",cartItem1}
+ {"1002",cartItem2}
+ {"1003",cartItem3}
+
+cartItem={p,100}
+p={"1001","xxx","xxx",55.00}
+
+map.ketSet
+  
+  CartItem a=map.get("1001");
+ 
+ 
+ 
+ 
+  
+   
+   
+  
+  
+    
+  
+

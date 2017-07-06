@@ -1,0 +1,14 @@
+package com.test.RegexTest;
+
+public class Test4 {
+	
+	public static void main(String[] args) {
+	
+		 /*
+		  * 将一段文字中的全部邮箱找出来
+		  * 
+		  */
+		
+	}
+
+}

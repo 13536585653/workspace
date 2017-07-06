@@ -1,0 +1,6 @@
+package com.test.example;
+
+public class Gun  extends Weapon{
+
+	
+}
