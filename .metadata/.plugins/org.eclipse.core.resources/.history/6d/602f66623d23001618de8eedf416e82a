@@ -1,0 +1,80 @@
+package com.test.front.servlet;
+
+import java.io.IOException;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.test.bean.Vote;
+import com.test.bean.VoteOption;
+import com.test.dao.UserVoteDao;
+import com.test.dao.VoteDao;
+import com.test.dao.VoteOptionDao;
+
+/**
+ * Servlet implementation class Vote
+ */
+public class VoteServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+    private VoteDao voteDao=new VoteDao();   
+    private VoteOptionDao  voteOptionDao=new VoteOptionDao();
+    private UserVoteDao  userVoteDao=new UserVoteDao();
+    
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public VoteServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		        
+		        //得到用户名
+		        String u_name=(String) request.getSession().getAttribute("user_name");
+		
+		        //得到主题id
+				int v_id=Integer.parseInt(request.getParameter("v_id"));
+				Vote vote=null;
+				
+				//先查user_name 有没投过v_id;
+				if(userVoteDao.check(u_name,v_id)){
+					System.out.println("你已经投过啦...");
+					request.getSession().setAttribute("alertmsg", "对不起，你只能投一次!");
+					response.sendRedirect("../alert.jsp"); 
+					return;
+				}
+				
+				
+			
+				//通过主题id,获得主题
+				vote=voteDao.getVoteById(v_id);
+				
+				
+				
+				
+				//通过投票主题，获得该主题对应的选项列表
+				List<VoteOption>  options=voteOptionDao.getListById(vote.getV_id());
+				
+				
+				//将vote和options存入ctx
+				request.getServletContext().setAttribute("vote", vote);
+				request.getServletContext().setAttribute("options", options);
+				
+				response.sendRedirect("vote.jsp");
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+	}
+
+}

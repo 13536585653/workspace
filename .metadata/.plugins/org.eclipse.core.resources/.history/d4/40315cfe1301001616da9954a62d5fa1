@@ -1,0 +1,14 @@
+package com.test.stringTest;
+
+public class Test2 {
+	
+	public static void main(String[] args) {
+		
+	    String s="  asdasdasds asdasd asdas das d  ";
+	    //int x=s.length();
+	    
+	    System.out.println("字符串的长度是:"+s.length());
+		
+	}
+
+}

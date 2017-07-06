@@ -1,0 +1,17 @@
+package com.test.GregorianCalendarTest;
+
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
+public class Test1 {
+ 
+	  public static void main(String[] args) {
+		
+		  //当前系统时间的日历对象
+		  GregorianCalendar  calendar =new GregorianCalendar();
+		  
+		  System.out.println("年份:"+calendar.get(Calendar.YEAR));
+		  
+	}
+	
+}

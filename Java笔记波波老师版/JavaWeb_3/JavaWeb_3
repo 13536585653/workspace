@@ -1,0 +1,97 @@
+1.过滤器 Filter
+  
+    客户端提交请求到servlet之前 ，
+    可以使用过滤器，对请求和响应做出过滤
+    常用于字符编码过滤，登录认证过滤，权限过滤等....
+
+2.filter 必须继承 Filter 类
+  init()    ---- filter初始化用的
+  doFilter()  ----- 过滤代码
+  destroy()   -----filter销毁时用的
+  
+  filter在tomcat启动时，就生成了。
+ 
+3.过滤器起过滤作用的是 doFilter() 方法里的代码
+
+ doFilter()里 chain.doFilter(request, response);
+ 此代码作用是将请求传递给下个过滤器或者是servlet 
+ 此代码不能删。
+
+
+4. 读取web.xml里的配置信息
+     4.1 读取servlet配置里的初始化信息
+     ServletConfig cfg=getServletConfig();
+	 String school=cfg.getInitParameter("school");
+   
+     4.2 读取filer里的初始化信息
+      cfg.getInitParameter("encoding");
+      
+
+5.  多个servlet如何共享信息
+  
+    5.1 通过request,将信息存入request，再转发给另一个servlet.
+                 另一个servlet通过request取出.
+              request.setAttribute("xxx",xxxx); 存
+              request.getAttribute("xxx");     取
+        此方式只能通过转发。不能重定向.
+        
+     5.2 通过ServletContext。
+         ServletContext 是一个存东西的容器，
+                 同一个项目里的servlet都可以访问
+          ServletContext ctx=request.getServletContext();
+          ctx.setAttribute("xxx",xxxx); 存
+          xxx=ctx.getAttribute("xxx");     取  
+    
+6. 监听器 listener
+ 
+    可以对ServletContext监听，session监听，request监听。
+   可以监听被监听对象的创建和销毁。可以监听 被监听对象的存值得添加和删除
+  
+  如ServletContext监听器
+  可以在tomcat启动时，做一个初始化的工作.........
+   
+ 如session监听器
+ 可以监听session的创建和销毁，常用来统计当前网站的人数  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 作业1：
+ 编写一个表单提交的应用，要求使用过滤器，实现字符编码过滤
+ 
+ 作业2：
+ 将作业1中的编码格式，放入web.xml里的filter里配置，优化字符编码过滤器
+ 
+ 作业3：
+ 编写一个表单提交，将数据提交给Servlet1, 
+ Servlet1得到表单提交的数据，
+ 将数据存入request中和ServletContext中，再将请求转发给Servlet2.
+ 在Servlet2中，从request和ServletContext中，将数据取出，显示在页面上.
+  直接访问Servlet2 ，看看能取出几个数据？
+ 重启Tomcat，再直接访问Servlet2 ，看看能取出几个数据？
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

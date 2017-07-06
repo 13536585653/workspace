@@ -1,0 +1,28 @@
+package com.test.GregorianCalendarTest;
+
+import java.util.GregorianCalendar;
+import java.util.Scanner;
+
+public class Test3 {
+	
+	public static void main(String[] args) {
+		 //输入你的生日，我可以知道你生日是星期几
+		 //我还可以知道 n年后，你生日是星期几
+		
+		String[] weeks={"日","一","二","三","四","五","六"};
+		
+		Scanner input=new Scanner(System.in);
+		System.out.println("请输入出生年份:");
+		int y=input.nextInt();
+		System.out.println("请输入出生月份:");
+		int m=input.nextInt();
+		System.out.println("请输入出生日期:");
+		int d=input.nextInt();
+		
+		//通过年月日，产生一个日历
+		GregorianCalendar gc1=new GregorianCalendar(y,m-1,d);
+		
+		
+	}
+
+}

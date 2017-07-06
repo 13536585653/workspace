@@ -1,0 +1,50 @@
+package com.test.servlet;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class registerServlet
+ */
+public class RegisterServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public RegisterServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String regname=request.getParameter("regname");
+		String pwd=request.getParameter("pwd");
+		String name=request.getParameter("name");
+		String  s=request.getParameter("s");
+		
+		if(regname!=null&&regname.length()!=0&&pwd!=null&&pwd.length()!=0&&name!=null&&name.length()!=0&&s!=null&&s.length()!=0){
+			System.out.println("信息无误！");
+			request.getSession().setAttribute("regname", regname);
+			response.sendRedirect("xx.jsp");
+		}else{
+			System.out.println("信息有误，无法登录！");
+			response.sendRedirect("register.jsp");
+		}
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		this.doGet(request, response);
+	}
+
+}

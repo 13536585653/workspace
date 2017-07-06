@@ -1,0 +1,20 @@
+package com.test.example2;
+
+public class B  extends A{
+
+	@Override
+	public void f1() {
+		System.out.println("B÷ÿ–¥f1∑Ω∑®");
+		
+	}
+
+	@Override
+	public void f2() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	
+
+}

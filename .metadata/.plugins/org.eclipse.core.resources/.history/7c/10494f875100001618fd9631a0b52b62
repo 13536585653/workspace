@@ -1,0 +1,43 @@
+package com.test.exceptionTest;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		
+		 Scanner input =new Scanner(System.in);
+		   double x=5;
+		   int y;
+		   double z=0;
+		   String name=null;
+		   char c='a';
+		   try{
+		       System.out.println("请输入y的值:");
+		       y=input.nextInt();
+		       z=x/y;
+		       c= name.charAt(0);   //取字符串的第一个字符
+		       System.out.println("try里的最后一句");
+		   }catch(InputMismatchException  e) {  //捕获输入不匹配异常
+			 
+			      System.out.println("出现输入不匹配异常啦");
+			      e.printStackTrace();
+			    
+			   
+		   }catch(NullPointerException e){
+			   System.out.println("出现空对象异常啦...");
+			   e.printStackTrace();
+			
+		   }catch(Exception e){
+			   System.out.println("出现异常啦...");
+			   e.printStackTrace();
+		   }
+		   
+		   
+		   System.out.println("z:"+z);
+		   System.out.println("c:"+c);
+		   System.out.println("程序结束");
+	}
+
+}

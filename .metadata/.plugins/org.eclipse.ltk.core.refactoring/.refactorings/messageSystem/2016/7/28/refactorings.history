@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;org.demo.controller.FindMassage&apos; to &apos;FindMessage&apos;&#x0D;&#x0A;- Original project: &apos;messageSystem&apos;&#x0D;&#x0A;- Original element: &apos;org.demo.controller.FindMassage&apos;&#x0D;&#x0A;- Renamed element: &apos;org.demo.controller.FindMessage&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;FindMassage&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;org.demo.controller{FindMassage.java[FindMassage" matchStrategy="1" name="FindMessage" qualified="false" references="true" similarDeclarations="false" stamp="1467785691509" textual="false" version="1.0"/>
+</session>

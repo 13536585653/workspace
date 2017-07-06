@@ -1,0 +1,6 @@
+#Tue May 03 20:14:58 CST 2016
+__DEFAULT__=false
+org.eclipse.sdk.Eclipse.master=true
+org.eclipse.sdk.Google.master=true
+org.eclipse.help.ui.localSearch.master=true
+expression=Define a New Server

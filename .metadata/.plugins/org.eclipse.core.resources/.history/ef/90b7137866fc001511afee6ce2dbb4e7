@@ -1,0 +1,16 @@
+package com.test.example;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		
+		Person p=new Person();   //产生一个人
+		
+		Gun  gun=new Gun();   //产生一把枪
+		
+		p.setWeapon(gun);     //将子类对象作为参数传入
+		
+		p.play();   
+	}
+
+}

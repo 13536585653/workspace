@@ -1,0 +1,12 @@
+package com.test.example;
+
+public class Gun  extends Weapon{
+
+	@Override   //ÖØÐ´
+	public void attack() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+}

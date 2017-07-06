@@ -1,0 +1,40 @@
+package com.test.bean;
+
+public class Animal {
+
+	private String name;
+	
+	public  final String XXXXX="aaa";   //常量
+	
+	public void setName(String name){
+		this.name=name;
+	}
+	public String getName(){
+		return this.name;
+	}
+	
+	public Animal(){
+		 
+	}
+	
+	public Animal(String name){
+		this.name=name;
+	}
+	
+	public String toString(){
+		return "Animal[name="+this.name+"]";
+	}
+	
+	public void eat(){
+		
+		System.out.println(this.name+"在吃东西...");
+	}
+	
+	final public  void  ccc(){
+		
+		
+	}
+	
+    
+	
+}

@@ -1,0 +1,21 @@
+1.String 类
+  当创建一个字符串时，字符串的长度就固定了。
+  String  s="abc";
+  当  s赋值为另一个字符串时，
+   s="zzz";  
+   那么内存中，会再出现一个"zzz"字符串。变量s指向"zzz",
+   "abc"在内存中就失去了作用。
+   
+   String s="abc";
+   s=s+"zzz";
+   
+   s=?   //abczzz
+   
+   
+   因此，字符串String类，使用时，效率较低。
+   
+2.  StringBuffer 字符串缓冲类
+ StringBuffer sb= new StringBuffer("abc");
+   系统会分配额外的16个字符的内存，    
+   StringBuffer sb1=sb.append("zzz");
+   

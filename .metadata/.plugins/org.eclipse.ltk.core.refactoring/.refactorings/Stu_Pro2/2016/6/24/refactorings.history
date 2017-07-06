@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;DBUtil.java&apos; to &apos;login/src/org.demo.utils&apos;&#x0D;&#x0A;- Original project: &apos;Stu_Pro2&apos;&#x0D;&#x0A;- Destination element: &apos;login/src/org.demo.utils&apos;&#x0D;&#x0A;- Original element: &apos;com.test.util.DBUtil.java&apos;" description="Copy compilation unit" destination="=login/src&lt;org.demo.utils" element1="/src&lt;com.test.util{DBUtil.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1465299250938" units="1" version="1.0"/>
+</session>

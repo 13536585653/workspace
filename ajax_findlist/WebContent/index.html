@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/jquery-1.7.2.js"></script>
+<script src="js/ajax.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$(":button").one("click",function(){
+		/* var req=createRequest();
+		req.open("post","findUser");
+		//req.open("post","findUser");
+		req.send();
+		req.onreadystatechange=function(){
+			if(req.readyState==4&&req.status==200){
+				//通过异步请求对象的responseText属性中获取响应内容
+				alert(req.getResponseHeader("Content-Type"));
+				var result=req.responseText;
+				//由于响应回来的是一个json字符串，那么无法直接解析里面的属性
+				
+				//所以我们需要将字符串转换成json对象
+				var jsonObj=$.parseJSON(result);
+				$.each(jsonObj,function(key,value){
+					$("table").append("<tr><td>"+value.id+"</td><td>"+value.name+"</td><td>"+value.age+"</td><td>"+value.address+"</td></tr>");
+				});
+			}
+		} */
+		
+		//get请求(简写版)
+		  /* $.get("findUser",{"name":"用户1","age":22,"address":"江西"},function(result){
+			$.each(result,function(key,value){
+				$("table").append("<tr><td>"+value.id+"</td><td>"+value.name+"</td><td>"+value.age+"</td><td>"+value.address+"</td></tr>");
+			});
+		});
+	}); */  
+	
+		//post请求(简写版)
+		 $.post("findUser",{"name":"用户1","age":25,"address":"赣州"},function(result){
+			 $.each(result,function(key,value){
+				 $("table").append("<tr><td>"+value.id+"</td><td>"+value.name+"</td><td>"+value.age+"</td><td>"+value.address+"</td></tr>");
+			 });
+		 });
+	});
+});
+</script>
+</head>
+<body>
+<center>
+<h2>Ajax查用户数据的应用</h2>
+<p><input type="button" value="显示">
+<table border="1px">
+	<tr>
+		<th>ID</th>
+		<th>Name</th>
+		<th>Age</th>
+		<th>Address</th>
+	</tr>
+</table>
+</center>
+</body>
+</html>

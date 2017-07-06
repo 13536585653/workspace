@@ -1,0 +1,16 @@
+package com.test.testStatic;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		
+		 int x=5;
+		 int y=x;
+		 
+		 y=10;
+		 
+		 System.out.println("x:"+x);
+		 System.out.println("y:"+y);
+	}
+
+}

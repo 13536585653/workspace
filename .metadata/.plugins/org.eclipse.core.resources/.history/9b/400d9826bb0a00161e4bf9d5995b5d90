@@ -1,0 +1,52 @@
+package Customer_and_Producter;
+
+import java.util.LinkedList;
+
+public class Store {
+	private int max=10;
+	private LinkedList<Object> list=new LinkedList<Object>();
+	public int getMax() {
+		return max;
+	}
+	public void setMax(int max) {
+		this.max = max;
+	}
+	public LinkedList<Object> getList() {
+		return list;
+	}
+	public void setList(LinkedList<Object> list) {
+		this.list = list;
+	}
+	
+	public synchronized void add(){
+		while(list.size()>=max){
+			try {
+				this.wait();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		}
+		System.out.println(Thread.currentThread().getName()+"生产了");
+		list.add(new Object());
+		System.out.println("仓库大小为："+list.size());
+		this.notifyAll();
+	}
+	
+	public synchronized void del(){
+		while(list.size()<=0){
+			try {
+				this.wait();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		System.out.println(Thread.currentThread().getName()+"消费了");
+		list.remove();
+		System.out.println("仓库大小为："+list.size());
+		this.notifyAll();
+	} 
+}

@@ -1,0 +1,16 @@
+JAVA操作数据库的方法
+
+1、获得数据库连接  如 Connection conn=DBConnection.getConnection();
+	————>
+
+2、编写sql语句     如 String sql="insert into table1 values(?,?,?)";
+	————>
+
+3、产生stm或pstm   如 stm=conn.createStatement(); PreparedStatement pstm=null;
+	————>
+3.1、使用CallableStatement catm=conn.preparcCall(sql);执行sql语句
+
+
+4、为sql语句注入参数 
+4.1 int n=pstm.executeUpdate()方法; 需满足（要Update，delete，insert必须用这个方法） ——>输出n ——>关闭资源 如、DBConnection.close(pstm, conn);
+4.2 ResultSet rs=pstm.executeQuery()方法; 需满足（要select必须用这个方法） ——>从结果集中循环取出结果——>关闭资源 如、DBConnection.close(pstm, conn);

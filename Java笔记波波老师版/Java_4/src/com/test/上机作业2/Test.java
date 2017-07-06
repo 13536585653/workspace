@@ -1,0 +1,24 @@
+package com.test.上机作业2;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		
+		//Employee emp=new Employee();
+		//emp.introduce();
+		
+		//Manager m=new Manager();
+		//m.introduce();
+		
+		//Manager m=new FinanceManager();
+		//m.calculateSalary();
+		
+		SaleManager  sm=new SaleManager();
+		Manager m=(Manager)sm;
+		
+		m.processs();   
+		m.introduce();
+		//m.analyseSale();
+	}
+
+}

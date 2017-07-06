@@ -1,0 +1,9 @@
+package com.test.bean;
+
+public class Student {
+	private int userid;
+	private String loginName;
+	private String password;
+	private String truename;
+	private String semester ;
+}

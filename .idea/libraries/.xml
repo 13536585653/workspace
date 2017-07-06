@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="工具类">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/java笔记亮哥老师版/工具类/JDK_API_1_6_zh_CN.zip!/" />
+      <root url="jar://$PROJECT_DIR$/java笔记亮哥老师版/工具类/BeanUtil.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

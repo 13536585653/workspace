@@ -1,0 +1,15 @@
+package com.test.DateTest;
+
+import java.util.Date;
+
+public class Test1 {
+	
+	public static void main(String[] args) {
+		
+		Date date1=new Date();  //当前系统时间
+		
+		System.out.println(date1);
+		
+	}
+
+}

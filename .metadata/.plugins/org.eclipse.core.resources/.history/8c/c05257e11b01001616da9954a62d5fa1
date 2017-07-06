@@ -1,0 +1,23 @@
+package com.test.stringTest;
+
+public class Test4 {
+	
+	public static void main(String[] args) {
+		
+		  String s="abcdefg";
+		  
+		  String s1=s.substring(2);
+		  String s2=s.substring(2,4);
+		  
+		  System.out.println(s1);
+		  System.out.println(s2);
+		
+		  
+		  String email="1212312@qq.com";
+		  int index=email.indexOf("@"); //’“@µƒŒª÷√
+		  String qq=email.substring(0,index);
+		  System.out.println(qq);
+		  
+	}
+
+}

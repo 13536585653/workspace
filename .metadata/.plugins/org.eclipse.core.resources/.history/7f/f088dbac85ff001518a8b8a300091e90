@@ -1,0 +1,9 @@
+package com.test.example3;
+
+public abstract class Door {
+
+	//抽象方法 --开关
+	
+	public abstract void open_close();
+}
+

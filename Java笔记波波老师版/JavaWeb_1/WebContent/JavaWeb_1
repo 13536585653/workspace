@@ -1,0 +1,73 @@
+1. Web应用
+  Web应用是基于浏览器的一种应用程序.
+   分为客户端和服务端。
+   静态网页----可以本地浏览 
+   动态网页----页面上的数据是从服务端返回的。必须部署在服务端.
+   
+2.web服务端
+   .net开发的动态网页   --->  IIS服务器
+   java开发的动态网页  ---> tomcat服务器 或 webLogic服务器等等
+   php开发的动态网页   ---> apache服务器
+   
+   javaweb开发 ，必须安装  tomcat服务器  ，版本7.x
+   
+3.在eclipse里。创建Dynamic web Project (动态web项目)
+    在eclipse的server里 添加tomcat服务器
+    
+4. 将web项目部署到tomcat服务器中,并启动tomcat
+
+5. web项目的结构
+     java Resources ----存放java源代码
+     WebContent---根目录,存放网页(动态，静态，js，css,图片资源等)
+           -WEB-INF 存放配置文件.
+           -WEB-INF/lib  存放第三方jar包
+           
+6.在浏览器浏览动态网页
+    http://127.0.0.1:8080/项目名/网页名    
+    http://127.0.0.1:8080/项目名/目录名/网页名
+
+7. 默认首页名 一般为 index.html 或index.htm 或index.jsp
+    http://127.0.0.1:8080/项目名/
+       访问的就是该项目的默认首页 。
+
+8. 客户端(浏览器)提交请求给服务端(tomcat).
+服务端如果没找到对应的资源，就会给客户端一个404页面[找不到资源]
+          如果找到了，就返回给客户端，相应的页面.
+    
+    访问URL:
+     http://127.0.0.1:8080/项目名/资源名
+    
+9. 平时开发使用  eclipse+tomcat 环境。
+     使用eclipse集成tomcat，来操作tomcat的启动，停止，重启等。
+
+10.当项目开发完毕。可以将web项目打包成war文件。
+  将打包后的文件，放入tomcat的webapps目录下,如：
+  C:\Program Files (x86)\Apache Software Foundation\Tomcat 7.0\webapps
+   单独启动tomcat即可。
+
+
+
+作业1--->tomcat安装成功
+下载tomcat7.x. 安装后，成功启动服务，并在浏览器输入
+   http://127.0.0.1:8080
+  可以看到tomcat猫
+  
+作业2：
+在eclipse里创建  Dynamic web Project (动态web项目)
+在servers里，添加刚才安装的tomcat
+将web项目，添加到tomcat中，启动tomcat.
+web项目里的WebContent目录下，新建一个1.html，
+在浏览器，浏览测试
+  
+作业3：
+将web项目，打包成war文件，部署到tomcat中，浏览测试。  
+
+
+
+
+
+
+
+
+
+   

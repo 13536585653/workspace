@@ -1,0 +1,29 @@
+package org.demo.sevlet;
+
+import java.io.File;
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/a")
+public class Find_file extends HttpServlet{
+	public void service(HttpServletRequest request,HttpServletResponse response)throws ServletException,IOException {
+		String fp=request.getParameter("file");
+		  String path = "fp";//换成自己的
+	       File folder = new File(path);
+		File temp[] = folder.listFiles();
+		String[] picNames = new String[temp.length];
+	        for(int i=0;i<temp.length;i++) {
+	             picNames[i] = temp[i].getName();
+	        }
+	        request.setAttribute("picNames", picNames);
+
+	        //转发
+	       request.getRequestDispatcher("see.jsp").forward(request, response);
+		   System.out.println(fp);
+	}
+}

@@ -1,0 +1,14 @@
+package com.test.RandomTest;
+
+import java.util.Random;
+
+public class Test1 {
+	
+	public static void main(String[] args) {
+		
+		Random  random=new Random(); //产生一个随机数对象
+		
+		
+	}
+
+}

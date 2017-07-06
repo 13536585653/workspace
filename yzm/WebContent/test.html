@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="test" method="post">
+<p>用户名:<input type="text" name="name">
+<p>密码:<input type="password" name="pwd">
+<p>验证码:<input type="text" name="yzm">
+<img id="yzm" src="util/yzm.jsp">
+<a href="javascript:changeYzm()">点击刷新验证码</a>
+<p><input type="submit" value="提交">
+</form>
+</body>
+<script>
+
+     
+  var changeYzm=function(){
+	  document.getElementById
+
+	/*
+	util/yzm.jsp表示跳转到的页面，？后面的date是一个参数（可以随便取），后面+new Date()是为了清除缓存。
+*/
+	  ("yzm").src="util/yzm.jsp?date="+new Date();
+  }
+
+
+</script>
+</html>

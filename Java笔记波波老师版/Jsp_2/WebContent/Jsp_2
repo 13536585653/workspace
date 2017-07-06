@@ -1,0 +1,71 @@
+1. jsp内置对象
+ out
+ request
+ response
+ session
+ application   ==  ServletContext
+ pageContext   -- 本页面可以存储数据的空间
+ 
+2.JavaBean 
+   javaBean 就是一个java类，为属性编写get,set方法。
+
+ 2.1  jsp页面可以使用jsp动作标签，使用javabean
+   
+   <jsp:useBean  id="xx" class="xxxx" scope=" page | request |session | application ">
+   new 一个对象，名字叫xx， 存放在page或request,session, application中
+   
+   <jsp:setProperty name="stu1" property="name"  value="张三"/>
+     为对象的属性赋值
+   
+   <jsp:getProperty property="name" name="stu1"/>
+     获得对象的属性的值
+     
+3. EL表达式  
+     是一种更简洁的输出方式  ,传统的jsp 输出 <%=xxx%>
+   el表达式输出   ${xxx} , ${stu.name}或${stu["name"]}
+  
+
+   el表达式支持运算符
+    ${3+5}   =>  8
+    ${3==5}  => false
+    ${ 8 > 4}  => true
+    ${ 8>4 && 4==2 }  => false
+    ${ 5>3?1:0}  ==>  1
+    ${ empty A }  判断一个对象是否为空
+
+    el表达式，可以从page,request,session,application里取值
+     ${pageScope.xxx} ,${requestScope.xxx}
+     ${sessionScope.xxx},${applicationScope.xxx}
+    
+  el表达式，不指定范围，会按 page->request->session->application
+  顺序，去取对应的值。
+  
+
+4. 优化错误代码页面
+   
+   可以在web.xml里配置自定义的错误显示信息
+   
+   <error-page>
+    <error-code>404</error-code>
+    <location>/error/404.html</location>
+  </error-page>
+  <error-page>
+    <error-code>500</error-code>
+    <location>/error/500.html</location>
+  </error-page>
+
+
+作业1：
+P165 上机1
+reg.html-->regServlet -->reg.jsp
+
+作业2：自定义404,500错误页面
+
+
+
+
+
+
+
+
+     

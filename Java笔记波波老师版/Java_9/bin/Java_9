@@ -1,0 +1,124 @@
+1. File 文件类 (java.io.File)
+ 
+  构造方法： 
+      File(String pathname) 
+            --通过将给定路径名字符串转换为抽象路径名来创建一个新 File 实例。
+  常用方法：
+      void  delete()   --删除文件或文件夹
+      void  createNewFile()  --创建新文件
+      boolean  exists()   --判断文件或文件夹是否存在
+      boolean  isDiretory()  ---判断是否是文件夹
+      void   mkdir()   --创建文件夹    
+      String[] list()   --获得某文件夹下的全部文件名称       
+      File[] listFiles()  --获得某文件夹下的全部文件
+ 
+2. 通过递归调用，输出文件夹里的全部内容，含子文件夹
+
+3. 字节流 （文件读写） -- 完成任意格式的文件的读写
+   字节输入流 (InputStream, FileInputStream )---- 读
+   字节输出流 (OutputStream ,FileOutputStream)---- 写
+
+  FileInputStream 类
+       构造方法：
+        FileInputStream(File file)  --创建文件的输入流
+      常用方法：     
+        void close() 
+                          关闭此文件输入流并释放与此流有关的所有系统资源。 
+        int read() 
+                    从此输入流中读取一个数据字节。 
+        int read(byte[] b) 
+                   从此输入流中将最多 b.length 个字节的数据读入一个 byte 数组中。 
+                   返回值如果是-1,表示读完了。
+
+    FileOutputStream 类
+           构造方法：
+        FileOutputStream(File file) 
+        FileOutputStream(File file,true)   追加  
+          常用方法：
+       void close() 
+                         关闭此文件输出流并释放与此流有关的所有系统资源。     
+      void write(byte[] b) 
+                    将 b.length 个字节从指定 byte 数组写入此文件输出流中。 
+      void write(int b) 
+                 将单字节写入此文件输出流。 
+        
+4. 字符流   --常用于读取文本类型的文件
+     
+      --按字符读取和写入数据
+   
+    FileReader类 
+       构造方法:
+      FileReader(File file) 
+                 在给定从中读取数据的 File 的情况下创建一个新 FileReader。
+       常用方法：    
+        int read()   读取单个字符。 
+        int read(char[] cbuf)   一次读取一个char类型的数组
+        void  close()   关闭流
+           
+    FileWriter类
+         构造方法:
+        FileWriter(File file) 
+                    根据给定的 File 对象构造一个 FileWriter 对象。 
+      常用方法：
+      void write(int c)     写入单个字符。 
+      void write(String str)   写入字符串
+      void  close()                 关闭流
+      
+
+5.对象的序列化
+    --将内存中的对象，写到文件中,读取文件中的对象到内存中
+    
+    前提： 对象的类，必须实现 Serializable 接口
+        
+    ObjectInputStream 类 
+       构造方法：
+       ObjectInputStream(InputStream in)  
+       常用方法：  
+       Object  readObject()   从 ObjectInputStream 读取对象。 
+
+    ObjectOutputStream 类
+       构造方法：
+     ObjectOutputStream(OutputStream out) 
+       常用方法：
+    void writeObject(Object obj) 
+                  将指定的对象写入 ObjectOutputStream。    
+    
+
+练习1：
+   在e:\ 创建一个abc.txt文件，在创建前，判断该文件是否存在，
+   如果存在，先删除，再创建
+  
+练习2：
+  输出 e:/目录下的全部文件名称 
+   
+练习3：
+  输出 e:/目录下，全部文件（含子文件夹）      
+  
+练习4：
+ 读取e://a.txt文件内容，输出到屏幕上（要求一次性读取）
+ 
+练习5：
+ 读取e://a.txt文件内容，输出到屏幕上（要求每次读取单字节）
+ 
+ 练习6：
+ 将“hello world” 写入e:\a.txt
+ 
+ 练习7：
+ 利用字节输入流，输出流，将一个文件一次性读完，再写入到另一个文件中，完成复制.
+ 
+ 练习8:
+ 利用字节输入流，输出流 ，边读边写，完成文件的复制
+ 
+ 练习9：
+ 利用字符流的读写。将一个文本文件内容，复制到另一个文本文件
+ (两种方法)
+ 
+ 练习10：
+ 编写一个Student类，属性[姓名，年龄] 并实现Serializable接口
+ 编写测试类，实例化3个对象，加入list中，将list保存到e:\student.txt文件中
+ 然后再读取该文件内容，输出到屏幕上
+ 
+ 
+ 
+ 
+  

@@ -1,0 +1,58 @@
+1.开发第一个java程序
+
+   回顾C语言开发
+    编写.c源程序->编译 .exe ->执行
+  
+   1.1下载并安装jdk1.7
+       默认安装位置：
+    C:\Program Files\Java\jdk1.7.0_79
+       在命令行输入:java -version
+       能够显示java版本，表示安装成功
+
+   1.2 配置环境变量中的path
+     在环境变量中系统的path变量中，加入
+     C:\Program Files\Java\jdk1.7.0_79\bin 
+
+     在命令行输入 javac  ,显示出相应内容，表示path路径配置成功
+
+
+   1.3 使用记事本编写一个最简单的java程序
+        名为：Hello_java.java
+
+   1.4 使用javac命令将.java源代码编译为.class文件
+       >javac   Hello_java.java
+
+   1.5 使用java命令，执行java程序
+       >java Hello_java
+
+
+2.使用eclipse开发java程序
+
+  2.1 下载并安装 eclipse 
+  2.2  第一次运行eclipse时，需要指定workspace。
+      此workspace就是项目存放的位置。
+  2.3  新建一个java项目(java project)
+  2.4 在项目里，新建一个class(类)
+  2.5 在类里，编写一个main方法
+  2.6 在main方法里，写代码
+  2.7 代码编写完毕后，点击运行。
+
+需要注意：
+
+  1. 类名 前必须加 public class
+  2. 建议类名 首字母大写 
+  3. 类名必须和文件名相同
+  4. main方法必须加 public  static void
+  5. main方法参数必须是String[] args
+
+
+3. 屏幕输出的语句写法：
+   System.out.print("xxxxxxx"); 输出完，不换行
+   System.out.println("xxxxxx"); 输出完，换行
+
+
+
+   
+
+
+

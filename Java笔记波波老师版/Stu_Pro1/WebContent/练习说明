@@ -1,0 +1,28 @@
+完成单表数据的增，删，查，改
+
+1.建立数据库stuDB,  创建学员表student
+(学号s_id,姓名 s_name ,年龄s_age,性别s_sex,爱好s_fun)
+
+2. 编写表对应的实体类 Student
+
+3.导入数据库所需的jar包,jstl所需的jar包
+
+4.编写数据库连接的工具类 DBUtil.java
+
+5.编写添加学员的页面 addStudent.html 
+
+6. 编写添加学员的servlet  --add
+     6.1 接受表单的提交数据
+     6.2 封装对象
+     6.3 调用Dao的操作数据方法
+   
+7. 编写操作数据的类 StudentDao
+     添加增加数据的方法
+
+
+
+
+
+
+
+

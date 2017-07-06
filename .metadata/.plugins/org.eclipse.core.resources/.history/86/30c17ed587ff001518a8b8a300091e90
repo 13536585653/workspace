@@ -1,0 +1,8 @@
+package com.test.example3;
+
+public class Car {
+
+	public void run(){
+		System.out.println("车的启动功能。。。。。");
+	}
+}

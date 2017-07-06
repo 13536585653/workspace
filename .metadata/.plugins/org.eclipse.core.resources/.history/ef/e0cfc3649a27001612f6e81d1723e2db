@@ -1,0 +1,36 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h2>学生注册系统</h2>
+<form action="registerServlet" method="post">
+<p>登录名称:<input id=regname type="text" name="regname">
+<p>密&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp码:<input id=pwd type="password" name="pwd">
+<p>真实姓名:<input id="name" type="text" name="name">
+<p>选择日期:<input id="s1" type="radio" name="s" value="s1">s1
+<input id="s2" type="radio" name="s" value="s2">s2
+<input id="s3" type="radio" name="s" value="s3">s3
+<p><input type="submit" value="提交">
+<input type="reset"  value="重置">
+</form>
+
+<script type="text/javascript">
+	var regname=document.getElementById(regname);
+	var pwd=document.getElementById(pwd);
+	var name=document.getElementById(name);
+	var s1=document.getElementById(s1);
+	var s2=document.getElementById(s2);
+	var s3=document.getElementById(s3);
+	
+	if(regname!=null&&pwd!=null&&name!=null&&s1!=null||s2!=null||s3!=null){
+		print("验证通过！");
+	}else{print("验证不通过！")}
+</script>
+</body>
+</html>

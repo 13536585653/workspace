@@ -1,0 +1,15 @@
+package com.test.example;
+
+public class Person {
+	
+	 //有一个属性 武器
+	private Weapon  weapon;
+	
+	public void setWeapon(Weapon weapon){
+		this.weapon=weapon;
+	}
+	
+	
+    //人有一个使用武器的方法
+	
+}

@@ -1,0 +1,94 @@
+1. JDBC  
+   java操作数据库，执行sql语句，增，删，查，改，调用存储过程
+   
+2. java可以操作多种类型的数据库，SQL SERVER, MYSQL ORACLE 等
+
+3. java操作SQL server数据库 ,加载 数据库驱动 jar包
+      sql2008  ----  sqljdbc4R2.jar
+        将该包复制到你的项目中，并build path -- add to build path
+
+ 4.  创建数据库的连接
+      
+            String driver="com.microsoft.sqlserver.jdbc.SQLServerDriver";
+			Class.forName(driver);    //注册驱动
+		    
+			//指明连接哪个数据库服务器的哪个数据库
+			String url="jdbc:sqlserver://localhost:1433;DatabaseName=TestDB";
+		    String user="sa";  //连接数据库的用户名
+		    String password="112121";   //连接数据库的密码
+		    
+		    Connection conn=DriverManager.getConnection(url, user, password);
+    
+    连接数据库失败的原因：
+      a. 没有拷贝数据库的jar包并 build path
+      b. 数据库服务没有启动 ,[保证sql server tcp/ip已启用]
+      c. 数据库名称写错
+      d. 用户名或密码错
+    
+  5. 通过connection对象  ,创建一个Statement对象(java.sql.Statement)
+        Statement  stm=conn.createStatement();
+  
+  6. 通过Statement对象的 executeUpdate(String sql)
+           执行 update,delete,insert的sql语句
+     
+        int executeUpdate(String sql)    //返回的是成功的条数  
+    
+   7. 执行完毕。关闭Statement和connection  
+           stm.close();
+           conn.close();
+           
+           
+           
+   8. 整个数据库的操作流程:
+       8.1  获得连接conn
+       8.2  编写要执行的sql语句
+       8.3  通过conn获得statement
+       8.4  通过statement执行sql语句
+       8.5  执行完毕后，关闭statement，conn
+       
+  
+  9. 代码优化，编写一个DBConnection类，专门负责建立连接和关闭资源    
+  
+  
+  10. PreparedStatement 比 Statement 更好用
+  
+    Statement在使用时，SQL语句不好拼凑
+    PreparedStatement ，SQL语句中 允许使用？代替变量
+    
+    pstm = conn.prepareStatement(sql);
+    pstm.setString(1, name);
+    int n=pstm.executeUpdate();
+    
+    
+           
+      
+ 练习1:
+   在sql server 2008中，创建一个数据库--TestDB。 
+  使用java测试连接 
+ 
+ 练习2：
+  在TestDB数据库中，创建product(p_id,p_name,p_price)
+  编写sql语句，向表里插入1条数据 ，测试.
+                          删除表里的数据，测试 
+      
+ 练习3:
+ 编写DBConnection类，实现数据库链接和关闭资源
+ 
+ 练习4:
+ 使用  DBConnection类 , 配合   PreparedStatement ,实现数据的增，删，改
+ 数据库 testDB, 表 product(p_id,p_name,p_price);
+ 4.1 插入3条测试数据
+       1 可乐 3.00
+       2 蛋糕  5.00
+       3 奶茶  4.00
+ 4.2. 删除 编号为2的数据
+ 4.3  将编号1的产品价格修改为3.50
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  

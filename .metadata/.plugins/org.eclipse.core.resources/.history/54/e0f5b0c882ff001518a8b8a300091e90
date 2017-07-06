@@ -1,0 +1,8 @@
+package com.test.interfaceTest;
+  
+public class A1 implements A{
+
+	//A1类 实现 A 接口
+	
+	
+}

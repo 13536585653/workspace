@@ -1,0 +1,17 @@
+package com.test.上机作业1;
+
+public class Account {
+	
+	private float amount;   //余额
+	
+	//构造方法
+	public Account(){
+		this.amount=10.0f;
+	}
+	
+	public Account(int money){
+		this.amount=(float)money;
+	}
+	
+
+}

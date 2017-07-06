@@ -1,0 +1,6 @@
+package com.test.exceptionTest;
+
+public class MyException extends Exception{
+
+	
+}

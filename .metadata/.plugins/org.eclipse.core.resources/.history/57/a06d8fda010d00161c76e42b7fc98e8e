@@ -1,0 +1,29 @@
+package DBConnection;
+
+public class Food {
+	private String food;
+
+	public Food() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Food(String food) {
+		super();
+		this.food = food;
+	}
+
+	public String getFood() {
+		return food;
+	}
+
+	public void setFood(String food) {
+		this.food = food;
+	}
+
+	@Override
+	public String toString() {
+		return "food [food=" + food + "]";
+	}
+	
+}

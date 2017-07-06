@@ -1,0 +1,101 @@
+1. 进程与线程
+  
+    一个程序就是一个进程. 为了提高程序运行效率，单个进程可以包含多个线程。
+    一个进程至少有1个线程----单线程
+    一个进程含多个线程  ----多线程
+
+2. java程序运行时，有一个main方法，main方法实际就是一个线程。主线程    
+
+    创建新线程，使用java.lang.Thread类
+    
+3. 多线程的实现   , 创建新执行线程有两种方法
+    
+       方法1：将类声明为 Thread 的子类,该子类应重写 Thread 类的 run 方法 
+                    在run方法里，写入要做的事情。
+                     调用该子类对象的start(),创建了新线程   
+                    【 调用start()方法，会自动调用你重写的run()方法.】
+                  
+      方法2【常用】： 编写一个类，实现Runnable接口，重写接口的run 方法
+          Thread th=new Thread(Runnable target, String name);
+          th.start();
+    
+      第2种方法的简写：
+         Thread th=new Thread(new Runnable() {
+			@Override
+			public void run() {
+				//你要做的事情
+				
+			}
+		 },"线程名称"); 
+         th.start();
+     
+4.线程的睡眠和中断
+      void sleep(long millis)    睡眠，暂停。单位毫秒
+      void interrupt()           中断线程 
+      void start()               开始线程
+      void join()                等待该线程终止。
+
+
+5. synchronized 关键字
+      修饰方法时，表示该方法被线程执行时，不能被打断.
+      也可以写成    synchronized 块
+
+6. 线程的等待和唤醒
+   void  wait()   当前线程等待
+   void notify()   唤醒在此对象监视器上等待的单个线程。
+   void notifyAll()   唤醒在此对象监视器上等待的所有线程。
+
+7. java.util.Timer  定时器类
+
+     指定时间做某事 或 指定时间，间隔多久，循环做某事
+    
+      构造方法：
+      Timer()   创建一个新计时器。
+      Timer(String name)  创建一个新计时器，其相关的线程具有指定的名称。
+
+   常用方法：
+    schedule(TimerTask task, Date time) 
+          安排在指定的时间执行指定的任务。
+    schedule(TimerTask task, long delay) 
+                 安排在指定的时间执行指定的任务。
+    schedule(TimerTask task, long delay, long period) 
+          安排指定的任务从指定的延迟后开始进行重复的固定延迟执行。
+    cancel() 
+          终止此计时器，丢弃所有当前已安排的任务。
+
+ 练习1：
+ 编写一个Thread类的子类，并重写run方法，在run方法里，循环输出100次
+ 在main里，创建2个子线程，调用start();
+   
+ 练习2 :
+ 编写一个类，实现Runable接口,重写run方法，在run方法里，循环输出100次
+ 在main里，通过Thread类的 Thread(Runnable target)构造方法，
+ 创建两个子线程，调用start();
+ 
+ 练习3：
+  开启子线程，让子线程等3秒，再执行.
+  
+ 练习4：
+ 开启两个线程 交替执行。要求线程1输出10句"xxxxx"，线程2输出20句"bbbbbb"，
+ 要求反复10次。  
+ 
+ 练习5：
+ 编写多线程程序，模拟窗口卖票.
+ 
+ 
+ 练习6：
+ 生产者和消费者问题：
+  有个箩筐，可以装10个馒头，5个工人生产馒头，当箩筐满了，工人就暂停生产。
+  有4个消费者购买馒头，当箩筐为空时，消费者就暂停消费。通知工人生产。
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  

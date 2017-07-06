@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>这是一个静态网页</h2>
+<form method="post" action="A">
+<p>姓名：<input type="text" name="name">
+<p>地址：<input type="text" name="address">
+<p><input type="submit">
+</form>
+</body>
+</html>

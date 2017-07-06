@@ -1,0 +1,19 @@
+package com.test.testStatic;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		
+		A  a1=new A();
+		a1.f(5);
+		
+		A  a2=new A();
+		a2.f(10);
+		
+		a1.f2();
+		a2.f2();
+		
+		
+	}
+
+}

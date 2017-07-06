@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+
+public class Test {
+	
+	public static void main(String[] args) {
+		
+		 int x;
+		 Scanner input =new Scanner(System.in);
+		 
+		 try{
+			 System.out.println("请输入x的值:");
+			 x=input.nextInt();
+		 
+		  }catch (Exception e) {
+			
+			 System.out.println("出现异常啦....");
+			 e.printStackTrace(); //异常信息输出
+			 x=0;
+		
+		 }finally{
+			
+			 System.out.println("finally的代码....");
+		 }
+		 
+		 System.out.println("x:"+x);
+		 System.out.println("程序运行完毕....");
+		
+		 
+		
+		
+	}
+
+}

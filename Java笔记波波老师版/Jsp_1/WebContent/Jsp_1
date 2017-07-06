@@ -1,0 +1,48 @@
+1.jsp 是为了简化servlet输出页面的问题，而产生的。
+  可以像普通的静态页面一样编写html内容。
+  html内容中，可以夹杂java代码
+  
+  
+2. jsp运行原理---本质就是servlet
+
+3.jsp注释
+<%-- jsp注释 --%>  等同于 java代码里的注释
+
+4.jsp指令
+  
+   4.1 page指令
+     <%@ page import="java.util.Date,xxxxx,xxxxx" %>  
+     
+   4.2 include指令
+    <%@ include file="1.html" %>
+   
+   4.3 taglib指令 ，后面详细讲
+    
+5. jsp声明  相当于Servlet类里的属性.
+  <%!   
+       String name="张三";
+  %>
+  
+6. jsp脚本，小代码  相当于servlet里,doGet或doPost方法里的代码
+  <%
+     xxxxxx ;  
+   
+  %>
+
+7. jsp表达式
+ <%= xxx %>  输出变量的值  
+
+8. jsp动作
+
+  jsp转发将请求转发到xxxServlet
+  <jsp:forward page="xxxServlet"></jsp:forward>
+   
+
+9. jsp页面最常用于将ctx或session里的值输出。
+
+
+  
+
+ 
+  
+  

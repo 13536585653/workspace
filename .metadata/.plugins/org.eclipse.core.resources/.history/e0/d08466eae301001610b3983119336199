@@ -1,0 +1,15 @@
+package com.test.SimpleDateFormatTest;
+
+import java.util.Date;
+
+public class Test {
+
+	  public static void main(String[] args) {
+		
+		   //将当前日期，以 2016-1-1 02:02:05 格式输出
+		  Date  date=new Date();
+		  
+		  
+		  
+	}
+}

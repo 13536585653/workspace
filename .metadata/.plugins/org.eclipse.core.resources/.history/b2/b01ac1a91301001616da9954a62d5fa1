@@ -1,0 +1,22 @@
+1.常用类库
+  Java语言，内置了很多常用的类，并写好了方法。
+  如：字符串类，文件类，集合类，数据库操作类等。
+  因此，掌握常用类库 ，就是学习JAVA最核心的内容。
+  【要会看api文档】
+  
+2.String 类  [java.lang.String]
+ String s="abc";
+ 构造方法:
+  String  s=new String();
+  String  s=new String("abc");
+  char[]  cc={'a','b','c'};
+  String s=new String(cc);
+ 常用方法：
+    length()   ---   返回一个字符串的长度
+ 
+ 
+ 
+ 
+  
+  
+  

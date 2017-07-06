@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="sqljdbc4R23">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Java笔记波波老师版/Java_11/src/sqljdbc4R2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

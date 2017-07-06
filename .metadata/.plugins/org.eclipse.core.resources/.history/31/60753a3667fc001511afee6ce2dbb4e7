@@ -1,0 +1,23 @@
+package com.test.example;
+
+public class Person {
+	
+	 //有一个属性 武器
+	private Weapon  weapon;
+	
+	
+	//方法参数，定义的是父类类型。
+	public void setWeapon(Weapon weapon){
+		this.weapon=weapon;
+	}
+	
+	
+    //人有一个使用武器的方法
+	public void play(){
+		System.out.println("游戏开始...");
+		this.weapon.attack();   //调用武器的攻击方法
+		System.out.println("游戏结束");
+	}
+	
+	
+}

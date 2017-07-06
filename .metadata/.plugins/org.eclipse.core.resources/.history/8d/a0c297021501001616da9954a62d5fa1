@@ -1,0 +1,24 @@
+package com.test.stringTest;
+
+public class Test2 {
+	
+	public static void main(String[] args) {
+		
+	    String s="  asdasdasds asdasd asdas das d  ";
+	    //int x=s.length();
+	    System.out.println("字符串的长度是:"+s.length());
+		
+	    String s1="abc";
+	    char c=s1.charAt(1);
+	    System.out.println("c:"+c);
+	    
+	    //indexOf  方法
+	    String s2="abczzccczzdd";
+	    String s3="ss";
+	    
+	    int x=s2.indexOf(s3);
+	    System.out.println(x);
+	    
+	}
+
+}

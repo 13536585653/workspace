@@ -1,0 +1,58 @@
+1. JSTL 标签库
+也是解决JSP输出难问题的。
+
+2. 要使用jstl首先导入所需的jar包
+    jstl.jar 和 standard.jar 
+      放入 webCotent/WEB-INF/lib目录下
+
+3. 在jsp页面就可以使用jstl标签库了。
+   jstl标签库，分为核心标签库，格式化标签库，函数标签等。
+     
+      最常用的是核心标签库和格式化标签库
+
+4. 核心标签库
+        需要在页面开头，导入核心标签库
+   <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+   <c:out />
+   <c:set value="张三" var="name" scope="session"></c:set>
+   <c:forTokens   >
+    
+     常用
+   <c:if> </c:if> 
+   <c:foreach>   循环 
+   
+5. 格式化标签库
+  
+  最常用--格式化日期
+  <fmt:formatDate value="<%=new Date()%>" pattern="yyyy-MM-dd hh:mm:ss"/>
+      格式化数字
+<fmt:formatNumber  value="11.1111111" type="currency" />
+<fmt:formatNumber  value="11.1111111" type="percent" />
+<fmt:formatNumber  value="11.1111111" type="number" />
+        
+        
+        
+ 作业1：
+ 在jsp页面 按 yyyy-MM-dd hh:mm:ss 格式显示当前时间
+
+ 作业2：
+ 在jsp页面，使用<c:forEach>标签，输出一个list 和 一个map
+ 
+ 
+作业3：
+将投票的页面，修改为jstl标签输出
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+        
+      
+      

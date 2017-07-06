@@ -1,0 +1,14 @@
+package com.test.RandomTest;
+
+public class Test3 {
+  
+	 /*
+	  * 赌大小, 3个筛子, [1-6]
+	  *  1 1 1    6 6 6
+	  *  如果3个筛子的和 >=11 就为大   ,<=10 ,就为小
+	  */
+	public static void main(String[] args) {
+	
+	  
+    }
+}

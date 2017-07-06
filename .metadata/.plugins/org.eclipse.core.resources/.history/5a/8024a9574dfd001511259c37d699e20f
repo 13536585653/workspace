@@ -1,0 +1,20 @@
+package com.test.testStatic;
+
+public class Test3 {
+	
+	public static void main(String[] args) {
+		
+		int x=5;
+		f(x);
+		
+		System.out.println("函数外的x:"+x);
+		
+	}
+	
+	public static void f(int x){
+		
+		x++;
+		System.out.println("函数的x:"+x);
+	}
+
+}

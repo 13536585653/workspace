@@ -1,0 +1,27 @@
+package com.test.exceptionTest;
+
+public class Test3 {
+	
+	public static void main(String[] args) {
+		
+		f();
+	}
+	
+	public static void  f(){
+		
+	
+			
+			try {
+				
+				throw new Exception("自己产生的异常....");
+			
+			} catch (Exception e) {
+				
+				e.printStackTrace();
+			}
+		
+	
+		
+	}
+
+}

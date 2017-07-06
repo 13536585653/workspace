@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="lib25">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Java笔记波波老师版/Stu_Pro2/WebContent/WEB-INF/lib/jstl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Java笔记波波老师版/Stu_Pro2/WebContent/WEB-INF/lib/sqljdbc4R2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Java笔记波波老师版/Stu_Pro2/WebContent/WEB-INF/lib/standard.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

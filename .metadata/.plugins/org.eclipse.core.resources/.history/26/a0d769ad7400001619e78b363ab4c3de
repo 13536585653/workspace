@@ -1,0 +1,15 @@
+package com.test.exceptionTest;
+
+import java.io.File;
+
+public class Test7 {
+	
+	public static void main(String[] args) {
+		
+		File file=new File("c://a.txt");
+		
+		file.setReadOnly();
+		
+	}
+
+}

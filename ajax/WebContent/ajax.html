@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/ajax.js"></script>
+<script>
+//get请求方法
+   /* function doGet(){
+	var req=createRequest();
+	var uname=document.getElementById("name").value;
+	req.open("get","test?uname="+uname,true);
+	req.send();
+	req.onreadystatechange=function(){
+		if(req.readyState==4&&req.status==200){
+			var result=req.responseText;
+			alert(result);
+			document.getElementById("Id").innerHTML=result;
+		}
+	}
+		} */
+	//post请求方法
+	function doPost(){
+		var req=createRequest();
+		var uname=document.getElementById("name").value;
+		req.open("post","test",true);
+		//Post请求必须设置请求头部
+		req.setRequestHeader("Content-Type",
+		"application/x-www-form-urlencoded");
+		//其实这里的i其实就是key，要传到后台相对应。uname就是value
+		req.send("i="+uname);
+		req.onreadystatechange=function(){
+			if(req.readyState==4&&req.status==200){
+				var result=req.responseText;
+				alert(result);
+				document.getElementById("Id").innerHTML=result;
+			}
+		}
+	} 
+</script>
+</head>
+<body>
+<p>UserName:<input type="text" placeholder="请输入你的姓名" id="name" name="uname">
+<input type="button" value="get()" onclick="doGet()">
+<input type="button" value="post()" onclick="doPost()"><br>
+<div id="Id"></div>
+</body>
+</html>

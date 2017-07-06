@@ -1,0 +1,22 @@
+package com.test.stringTest;
+
+import java.util.Scanner;
+
+public class Test6 {
+	
+	public static void main(String[] args) {
+		
+		 Scanner input=new Scanner(System.in);
+		 System.out.println("请输入账户名:");
+		 String name=input.nextLine();
+		 System.out.println("请输入密码:");
+		 String password=input.nextLine();
+		 
+		 if(name=="admin" && password=="123456"){
+			 System.out.println("账户名和密码正确");
+		 }else
+			 System.out.println("账户名和密码不正确");
+		
+	}
+
+}

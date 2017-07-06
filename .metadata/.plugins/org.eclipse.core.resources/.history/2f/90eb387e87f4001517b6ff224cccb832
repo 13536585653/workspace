@@ -1,0 +1,20 @@
+
+public class He_java {
+	
+	/*
+	 * 多行注释
+	 * 
+	 */
+	
+	//main方法
+	public static void main(String[] args){
+		
+		//在屏幕上输出
+		System.out.println("你好，这是我的一个java程序");
+		System.out.print("你好，这是我的一个java程序");
+		
+	}
+	
+	
+
+}

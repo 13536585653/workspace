@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="lib28">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Java笔记波波老师版/Vote完整版/WebContent/WEB-INF/lib/standard.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Java笔记波波老师版/Vote完整版/WebContent/WEB-INF/lib/jstl.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

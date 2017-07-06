@@ -1,0 +1,29 @@
+package com.test.RegexTest;
+
+import java.util.Scanner;
+import java.util.regex.Pattern;
+
+public class Test2 {
+	
+	public static void main(String[] args) {
+	  
+		  //检查固定电话号码
+		  /*
+		   * 电话号码规则（区号-号码 ,区号可以是3或4位，号码可以是7或8位）
+		   * 
+		   */
+		//编写规则的正则表达式
+		String regex="[0-9]{3,4}-[0-9]{7,8}";
+		
+		Scanner input=new Scanner(System.in);
+		System.out.println("请输入电话号码:");
+		String tel=input.nextLine();
+		
+		 //检查
+		if(Pattern.matches(regex, tel)){
+			System.out.println("你输入的符合规则");
+		}else
+			System.out.println("你输入的不符合规则");
+	}
+
+}

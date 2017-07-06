@@ -1,0 +1,14 @@
+package com.test.StringBufferTest;
+
+public class Test1 {
+	
+	public static void main(String[] args) {
+		StringBuffer  sb=new StringBuffer("abc");
+		
+		sb.append("zzz");
+		
+		System.out.println(sb);
+		
+	}
+
+}

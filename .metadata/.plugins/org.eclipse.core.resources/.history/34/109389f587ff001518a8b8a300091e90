@@ -1,0 +1,19 @@
+package com.test.example3;
+
+public class AlarmDoor extends Door implements Alarm{
+
+	 /*
+	  * 防盗门 继承 Door ,并实现Alarm 接口
+	  * (non-Javadoc)
+	  * @see com.test.example3.Door#open_close()
+	  */
+	
+	@Override
+	public void open_close() {
+
+           System.out.println("防盗门开关......");
+		
+	}
+
+	
+}

@@ -1,0 +1,41 @@
+package com.test.ListTest;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Test2 {
+	
+	public static void main(String[] args) {
+		
+		//指定泛型的list
+		List<String> list=new ArrayList<String>();
+		list.add("abc");
+		list.add("zzz");
+		list.add("sss");
+	
+		for (String s : list) {
+			System.out.println(s);
+		}
+		
+		
+		List<Dog> list2=new ArrayList<Dog>();
+		Dog dog1=new Dog("小白","哈巴狗");
+		Dog dog2=new Dog("小黑","哈士奇");
+		list2.add(dog1);
+		list2.add(dog2);
+		list2.add(dog2);
+		
+		//使用for输出
+		for(int i=0;i<list2.size();i++){
+			System.out.println(list2.get(i));
+		}
+		
+		//使用foreach输出
+		for (Dog dog : list2) {
+			System.out.println(dog);
+		}
+		
+		
+	}
+
+}

@@ -1,0 +1,13 @@
+1. loginServlet
+　　　负责将当前用户名存入session
+　　　负责从ctx里取出用户列表，再加入当前用户，再存入ctx
+
+2. chatServlet 
+    负责得到用户聊天记录，并从ctx里取出历史聊记录，然后
+    将用户聊天加入历史聊天，再存入ctx
+    
+3.   xxServlet
+   负责从ctx里取出历史聊天记录，显示在页面上
+   
+4. ooServlet
+     负责从ctx里取出用户列表 。显示在页面上      

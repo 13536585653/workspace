@@ -1,0 +1,39 @@
+package com.test.example3;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		
+		WoodDoor wd=new WoodDoor();
+		IronDoor id=new IronDoor();
+		AlarmDoor  ad=new AlarmDoor();
+		
+		testDoor(wd);
+		testDoor(id);
+		testDoor(ad);
+	//	testDoor(car);  错误，testDoor方法，要求参数是Door
+		
+		
+		Car  car=new Car();
+		testCar(car);
+		//testCar(wd);  错误，testCar方法，要求参数是Car
+		
+		
+		
+		
+	}
+
+	//测试门的开关功能的方法
+	public static void testDoor(Door door){
+		door.open_close();
+	}
+	
+	//测试车的功能
+	public static void testCar(Car car){
+		 car.run();
+	}
+	
+	
+	
+	
+}

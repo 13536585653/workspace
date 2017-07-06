@@ -1,0 +1,5 @@
+package org.demo.servlet;
+
+public class GetCookieServlet {
+
+}

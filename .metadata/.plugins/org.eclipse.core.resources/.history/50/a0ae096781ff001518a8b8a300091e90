@@ -1,0 +1,9 @@
+package com.test.example2;
+
+public abstract class D {
+	
+	public void d(){
+		
+	}
+
+}

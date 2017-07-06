@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="sqljdbc4R21">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Ketanglianxi/src/Java_link_SQL/sqljdbc4R2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

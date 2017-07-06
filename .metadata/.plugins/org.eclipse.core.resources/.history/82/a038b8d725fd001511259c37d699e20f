@@ -1,0 +1,15 @@
+package com.test.上机作业2;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		
+		//Employee emp=new Employee();
+		//emp.introduce();
+		
+		Manager m=new Manager();
+		m.introduce();
+		
+	}
+
+}

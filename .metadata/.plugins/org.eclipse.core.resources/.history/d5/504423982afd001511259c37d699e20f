@@ -1,0 +1,18 @@
+package com.test.testStatic;
+
+public class A {
+	
+	int x;
+	static int X;
+	
+	public void f(int x){
+		this.x=x;
+		this.X=x;
+	}
+	
+	public void f2(){
+		System.out.println("非静态变量:"+x);
+		System.out.println("静态变量:"+X);
+	}
+
+}

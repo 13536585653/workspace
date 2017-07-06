@@ -1,0 +1,31 @@
+package com.test.exceptionTest;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		
+		 Scanner input =new Scanner(System.in);
+		   double x=5;
+		   int y;
+		   double z;
+		   String name="abc";
+		 
+		   try{
+		       System.out.println("请输入y的值:");
+		       y=input.nextInt();
+		       z=x/y;
+		       char c= name.charAt(0);
+		   
+		   }catch (InputMismatchException  e) {
+			 
+			    e.printStackTrace();
+			     z=0;
+		   }
+		   System.out.println("z:"+z);
+		   System.out.println("程序结束");
+	}
+
+}

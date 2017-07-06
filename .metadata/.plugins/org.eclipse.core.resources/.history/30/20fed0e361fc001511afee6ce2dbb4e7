@@ -1,0 +1,25 @@
+package com.test.test;
+
+import com.test.bean2.Boy;
+import com.test.bean2.Person;
+
+public class Test3 {
+	
+	public static void main(String[] args) {
+		
+		Person  p=new Person("张三", "男");
+		Boy boy1=new Boy("李四", "男", 55.5);
+		
+		Person boy2=new Boy("王五","男",44.5);
+		
+		p.eat();
+		
+		boy1.eat();
+		boy1.play();
+		
+		
+		
+		
+	}
+
+}

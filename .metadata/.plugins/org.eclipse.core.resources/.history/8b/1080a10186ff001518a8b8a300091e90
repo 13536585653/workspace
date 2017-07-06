@@ -1,0 +1,12 @@
+package com.test.example3;
+
+public class IronDoor extends Door {
+
+	@Override
+	public void open_close() {
+
+       System.out.println("铁门的开关.......");
+		
+	}
+
+}

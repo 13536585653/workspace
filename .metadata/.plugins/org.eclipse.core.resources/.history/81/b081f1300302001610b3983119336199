@@ -1,0 +1,145 @@
+1.常用类库
+  Java语言，内置了很多常用的类，并写好了方法。
+  如：字符串类，文件类，集合类，数据库操作类等。
+  因此，掌握常用类库 ，就是学习JAVA最核心的内容。
+  【要会看api文档】
+  
+2.String 类  [java.lang.String]
+ String s="abc";
+ 构造方法:
+  String  s=new String();
+  String  s=new String("abc");
+  char[]  cc={'a','b','c'};
+  String s=new String(cc);
+ 常用方法：
+   int  length()   ---   返回一个字符串的长度
+   char charAt(int index)   --  返回指定位置的单个字符 
+   int  indexOf(String str) 
+         --返回指定子字符串在此字符串中第一次出现处的索引。
+         --找不到，返回-1
+   int  indexOf(String str, int fromIndex) 
+   -- 返回指定子字符串在此字符串中第一次出现处的索引，从指定的索引开始。
+   int  lastIndexOf(String str) 
+      -返回指定子字符串在此字符串中最后一次出现处的索引。
+  String substring(int beginIndex) 
+        --  返回一个新的字符串，它是此字符串的一个子字符串。 
+  String substring(int beginIndex, int endIndex)  
+    
+  String trim() 
+          -- 返回字符串的副本，忽略前导空白和尾部空白。   
+  boolean equals(Object anObject) 
+           --将此字符串与指定的对象比较。 
+  boolean equalsIgnoreCase(String anotherString)  
+           --将此字符串与指定的对象,忽略大小写比较。 
+     
+  
+ 
+   
+ 3. 随机数类 Random (java.util.Random)
+   
+ 	构造方法:
+	Random() 
+          创建一个新的随机数生成器。 
+	Random(long seed) 
+          使用单个 long 种子创建一个新的随机数生成器。 
+   
+     常用方法：
+     double nextDouble()    --产生一个0-1之间的double型的数
+     float nextFloat()   --产生一个0-1之间的double型的数
+     int  nextInt()    --产生一个随机整数
+     int nextInt(int n)  --产生一个0-n之间(不包含n)的随机整数
+ 
+4. Date类（java.util.Date）
+     Date对象存储的是某日期距离1900-1-1 00:00:00 的毫秒数
+     
+    构造方法：
+     Date()   --  获取当前系统时间
+   常用方法：
+    boolean before(Date d)  --判断此日期是否在d日期之前
+    boolean after(Date d)  -- 判断此日期是否在d日期之后
+ 
+5.日历类GregorianCalendar(java.util.GregorianCalendar)
+    GregorianCalendar 是  Calendar 子类 .
+  
+   构造方法：
+    GregorianCalendar()    --  当前系统时间的日历
+    GregorianCalendar(int year, int month, int dayOfMonth) 
+                构造一个带有给定日期设置的 GregorianCalendar。
+  常用方法：
+  int   get(xx属性)--从日历中获取某个属性
+ void   add(xx属性, 值) -- 从当前日历，从添加或减少xx年，xx月或xx天 
+ void   setTime(Date date)  --为日历设置日期(将日期转成日历)
+  
+  
+  xx属性注：
+   Calendar.YEAR     年
+   Calendar.MONTH    月  (0-11)
+   Calendar.Date    日期
+   Calendar.DAY_OF_WEEK  星期几  1-星期0,2-星期1
+   Calendar.HOUR,    小时
+   Calendar.MINUTE,  分钟
+   Calendar.SECOND,   秒
+   Calendar.MILLISECOND  毫秒
+   
+   
+6.SimpleDateFormat类(日期的格式化类 java.text.SimpleDateFormat)
+      此类作用，是将日期转成某种格式的字符串输出,
+      还可以将符合格式的字符串转成日期
+      yyyy-MM-dd  HH:mm:ss
+   
+    构造方法：
+     SimpleDateFormat(String pattern) 
+        --按照给定的格式，去实例化一个SimpleDateFormat对象
+  常用方法：
+   String  format(Date date)  --将日期格式化成字符串
+   Date parse(String source)  --将字符串格式化成日期对象
+ 
+ 练习1：
+   假如qq邮箱为 123123@qq.com
+   请把该邮箱的qq号码获取到.
+ 练习2：
+   请输入一串小写字母，将它们全部转为大写输出。
+ 练习3：
+   输入两串字符串，请比较它们的内容是否相同
+ 练习4：
+    假设"江泽民"为关键字，如果一个字符串中含有此关键字，则报警。
+    
+    int x=s.indexOf("江泽民");
+    if(x!=-1){
+                报警
+    }
+    
+ 练习5：
+   如果一串字符串中含有"江泽民"，请自动将"江泽民"替换为"*****"
+   输入：大声大声道江泽民爱上大声地
+   输出： 大声大声道******爱上大声地
+ 练习6：
+    产生10个20-30的随机整数
+    09
+ 练习7：
+   将当前系统时间 按 2016-5-6 12:30:25 格式输出
+     提示：使用SimpleDateFormat类的 format方法
+ 练习8:
+  在屏幕上输出：
+      当前是: 2016年4月14日，现在是 12点45分12秒  
+            提示：使用SimpleDateFormat类的 format方法 
+      今天是星期四
+             提示：使用日历类的get方法
+ 练习9：
+    按“年-月-日”格式输入年，月，日  ，
+    输出 那年的那天是星期几  
+    输出30年后的那天是星期几？       
+     提示 ：将字符串->日期->日历， 取出星期几
+          日历添加30年，取出星期几
+    
+    综合练习：
+    输入 任意的日期,格式如下：2016-5-5
+    输出它的星期几?
+    思路：字符串-->日期 -->日历
+  
+  
+  
+  
+  
+  
+  

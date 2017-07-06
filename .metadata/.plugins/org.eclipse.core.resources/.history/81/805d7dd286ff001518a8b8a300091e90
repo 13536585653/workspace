@@ -1,0 +1,22 @@
+package com.test.example3;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		
+		WoodDoor wd=new WoodDoor();
+		IronDoor id=new IronDoor();
+		AlarmDoor  ad=new AlarmDoor();
+		
+		testDoor(wd);
+		testDoor(id);
+		testDoor(ad);
+		
+	}
+
+	//测试门的开关功能的方法
+	public static void testDoor(Door door){
+		door.open_close();
+	}
+	
+}

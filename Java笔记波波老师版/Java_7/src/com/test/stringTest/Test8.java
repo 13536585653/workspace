@@ -1,0 +1,18 @@
+package com.test.stringTest;
+
+import java.util.Scanner;
+
+public class Test8 {
+	
+	public static void main(String[] args) {
+		 Scanner input=new Scanner(System.in);
+		 System.out.println("请输入内容:");
+		
+		 String s1=input.nextLine();
+		
+		 String s2=s1.replace("江泽民","********");
+		
+		 System.out.println(s2);
+	}
+
+}

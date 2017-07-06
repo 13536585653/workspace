@@ -1,0 +1,17 @@
+package org.demo.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import org.demo.entity.User;
+import org.demo.utils.DBUtil;
+
+public class UserDao {
+	//添加用户信息
+	public int saveUser(User user){
+		//获得连接
+		Connection conn=DBUtil.getConnection();
+		PreparedStatement pstm=null;
+		String sql="insert into user_info values(null,?,?,?)";
+		return 0;}
+}

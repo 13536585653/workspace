@@ -1,0 +1,31 @@
+package com.test.SimpleDateFormatTest;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Scanner;
+
+public class Test2 {
+    public static void main(String[] args) {
+	  //字符串转日期
+	  
+	   Scanner input=new Scanner(System.in);  
+	   System.out.println("请输入年,月,日（2016,5,6）：");
+	   String s=input.nextLine();
+	   
+	   SimpleDateFormat sdf=new SimpleDateFormat("yyyy,MM,dd");
+	   
+	   try {
+		
+		   Date date=sdf.parse(s);  //把字符串格式化成日期
+		   System.out.println(date);
+	  
+	   } catch (ParseException e) {
+		System.out.println("对不起，你输入的格式有误");// TODO Auto-generated catch block
+		e.printStackTrace();
+	  }
+	  
+	  
+	  
+    }
+}

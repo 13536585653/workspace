@@ -1,0 +1,14 @@
+package com.test.testStatic;
+
+public class Test2 {
+	
+	public static void main(String[] args) {
+		
+		f();
+	}
+	
+	public void f(){
+		System.out.println("f·½·¨");
+	}
+
+}

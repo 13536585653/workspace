@@ -1,0 +1,24 @@
+package com.test.SimpleDateFormatTest;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import javax.lang.model.util.SimpleAnnotationValueVisitor6;
+
+public class Test {
+
+	  public static void main(String[] args) {
+		
+		   //将当前日期，以 2016-1-1 02:02:05 格式输出
+		  Date  date=new Date();
+		  
+		  SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		  
+		  String s=sdf.format(date);  //将日期格式化成字符串
+		  System.out.println(date);
+		  System.out.println(s);
+		  
+		  
+		  
+	}
+}

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="lib14">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/增删查改/WebContent/WEB-INF/lib/jstl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/增删查改/WebContent/WEB-INF/lib/sqljdbc4R2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

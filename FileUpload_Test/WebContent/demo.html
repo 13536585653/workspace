@@ -1,0 +1,46 @@
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>文件上传</title>
+	<link rel="stylesheet" href="js/kindeditor/themes/default/default.css" />
+	<link rel="stylesheet" href="js/kindeditor/plugins/code/prettify.css" />
+	<script charset="utf-8" src="js/kindeditor/kindeditor.js"></script>
+	<script charset="utf-8" src="js/kindeditor/lang/zh-CN.js"></script>
+	<script charset="utf-8" src="js/kindeditor/plugins/code/prettify.js"></script>
+	<script>
+	
+	KindEditor.ready(function(K) {
+		var uploadbutton = K.uploadbutton({
+			button : K('#uploadButton')[0],
+			fieldName : 'imgFile',
+			url : 'upload_json.jsp',
+			afterUpload : function(data) {
+				if (data.error === 0) {
+					var url = K.formatUrl(data.url, 'absolute');
+					K('#url').val(url);
+				} else {
+					alert(data.message);
+				}
+			},
+			afterError : function(str) {
+				alert('自定义错误信息: ' + str);
+			}
+		});
+		uploadbutton.fileBox.change(function(e) {
+			uploadbutton.submit();
+		});
+	});
+	</script>
+</head>
+<body>
+<form action="test" method="post">
+<p>用户名:<input type="text" name="name"> 
+<p>头像:
+   <!-- 上传控件 -->
+	<input name="tx" class="ke-input-text" type="text" id="url" value="" readonly="readonly" /> 
+	<input type="button" id="uploadButton" value="上传头像" />
+   <!-- 上传结束 -->
+<p><input type="submit" value="提交">   
+</form>   
+</body>
+</html>

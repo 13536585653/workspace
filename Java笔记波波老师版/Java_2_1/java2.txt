@@ -1,0 +1,78 @@
+打字 sysout 再 alt+/ 会自动补齐成 System.out.println
+
+打字 main 再 alt+/ 会自动补齐成  main方法
+
+1.常用数据类型
+ int 整形
+ float 单精度浮点 ,赋值时带f
+ double 双精度浮点 
+ char   单个字符
+ String  字符串
+ boolean  布尔型，true 和 false
+ long   长整形
+ short  短整形
+ byte   字节类型,整数 -128~127
+
+2.通过键盘，为变量赋值
+
+       //产生一个输入对象,必须导入java.util.Scanner
+		Scanner input=new Scanner(System.in);
+        int x=input.nextInt(); //从键盘输入x的值
+        double y=input.nextDouble();
+    
+      对于字符串的输入，使用input的next()或nextLine()
+     注意这两个方法的区别
+
+3. java的运算符
+   + ,-,*, /, % ,++ ,-- ,
+   >,<,>=,<=,==,!=,
+   && ,|| ,! 
+   += , -=, *=, /= 
+   x=(1>0)?1:0
+    运算符的优先级  !>数学>关系>逻辑
+
+4.数据类型的自动转换与强制转换
+  
+     自动转换：当运算时，会自动向大的数据类型转换
+           如整形和浮点运算，结果就是浮点
+     强制转换：
+      double x=10.8;
+      int y=(int)x;
+           结果：y=10
+           
+5. java的条件语句
+     if(条件){
+    
+     }
+ 
+     if(xxx){
+     
+     }else{
+     
+     }
+
+     if(xxx){
+     
+     }else if(xxx){
+     
+     }else{
+     
+     }
+
+    switch(x){
+        case 1: 代码块 ;break;
+        case 2: 代码块 ;break;
+        
+        default: 代码块 ;
+    
+    }
+    x只能是int，short, byte,long 或 char
+
+
+
+
+
+
+
+ 
+ 

@@ -1,0 +1,118 @@
+1. 创建web项目,版本2.5 ,有web.xml文件.
+    版本3.0之后，使用注解，就没有了web.xml文件.
+    
+    web.xml文件。位于 WEB-INF目录下
+
+    
+2. 当客户端提交一个请求到tomcat.
+  ，那么就会根据web.xml里的配置，
+  通过url, 找对应的Servlet. 将请求交给Servlet处理。返回处理的结果 .
+  找不到就找对应的静态资源，如果还找不到，就返回404.
+  tomcat会根据找到的servlet类，自动的生成一个servlet对象
+  
+  
+  
+3. Servlet 是一个类，必须继承HttpServlet .
+    重写doGet() 和 doPost()方法.
+    doGet和 doPost分别对应表单的 get, post请求
+
+4. Servlet可以获得请求里的值
+        //设置响应的字符编码
+		req.setCharacterEncoding("utf-8");
+		//取值
+        String xxx=request.getParameter("xxx");   
+
+5. Servlet可以将内容输出到页面
+        
+        //设置响应类型和字符编码
+		resp.setContentType("text/html;charset=UTF-8");
+		
+		//创建一个输出对象
+		PrintWriter  out=resp.getWriter();
+		
+		//输出到页面
+		out.print("<h2 style='color:red'>姓名:"+name+"</h2>");
+
+
+6. Servlet的生命周期
+    6.1  第一次访问时候，tomcat会帮我们生成.
+    6.2  执行init()方法，实现初始化。只做一次
+    6.3  执行service()方法，处理请求。
+       service() 默认会根据请求的类型,将请求交给doGet() 或 doPost()处理.
+        如果自己写了service()方法，doGet()或doPost()就无效.
+   6.4  在销毁servlet时，会执行destory()方法
+
+                      第一次访问时，构造方法->init()    
+                -->service()   
+                      当容器销毁时-->destory()方法
+
+
+7. 请求Request和响应Response
+
+            常用方法略
+
+
+8. get提交的乱码解决
+        需要在tomcat的配置文件server.xml中去写一句话
+      编辑
+ C:\Program Files\Apache ...\tomcat......\conf\server.xml 文件 
+ E:\workspace\Servers\Tomcat v7.0 Server at localhost-config\server.xml文件
+     
+      修改
+      <Connector  connectionTimeout="20000" 
+                  port="8080" 
+                  protocol="HTTP/1.1" 
+                  redirectPort="8443"  
+                  URIEncoding="UTF-8"/>
+                  
+     将tomcat删掉，重新添加，启动服务即可。             
+
+
+
+9. servlet的转发和重定向
+
+ 重定向： 让客户端重新发送请求，到新的资源[静态资源,servlet]
+ 
+   response.sendRedirect("xxxxx");
+ 
+ 
+
+ 转发：servlet将请求发送给其他的资源[静态资源,servlet]
+            可以转发到web-inf目录里的资源
+
+request.getRequestDispatcher("xxxx").forward(request, response);		
+
+
+转发和重定向区别：
+  1. 转发不会丢失请求中的数据，重定向会。
+  2. 转发，客户端只发送一次请求。重定向，客户端发送了2次请求
+  3. 转发对客户端是透明的，地址栏不变
+           重定向地址栏会变。
+  4.  web-inf目录里的资源 只能通过转发访问
+
+
+
+
+      
+
+练习1：编写一个servlet，接受表单提交的数据。然后显示在页面上。
+ 要求解决post提交中文乱码的问题。
+ 
+ 练习2：修改tomcat的配置文件，解决中文get乱码问题
+ 编写servlet，要求重写service()方法，
+ 编写静态页面，含文本框，单选按钮，复选框，下拉框，
+ 提交到servlet，接受数据，显示在页面上。
+ 
+ 练习3：
+ 做一个简单的登录，
+ 要求登录成功，转发到succServlet显示欢迎用户名
+ login.html--->loginServlet ---->succServlet
+ 否则重定向到失败页面.
+ login.html--->loginServlet ---->error.html
+ 
+ 
+
+
+
+ 
+  

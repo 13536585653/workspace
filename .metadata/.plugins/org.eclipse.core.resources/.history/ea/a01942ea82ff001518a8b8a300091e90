@@ -1,0 +1,28 @@
+package com.test.interfaceTest;
+  
+public  class A1 implements A{
+	//A1类 实现 A 接口
+	//必须实现A接口定义的全部抽象方法.
+	@Override
+	public void a1() {
+		
+		
+	}
+
+	@Override
+	public void a2() {
+		
+		
+	}
+
+	@Override
+	public void a3() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	
+	
+	
+}

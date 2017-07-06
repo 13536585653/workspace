@@ -1,0 +1,9 @@
+1. 获得当前日期
+ 
+   Date date=new Date();
+   
+
+2. 获得指定日子2015-6-5的日期
+      String s="2015-06-05"
+      SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
+      Date date=sdf.parse(s);

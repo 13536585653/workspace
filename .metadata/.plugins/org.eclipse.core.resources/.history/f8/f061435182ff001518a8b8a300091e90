@@ -1,0 +1,11 @@
+package com.test.interfaceTest;
+
+public interface A {
+
+	//½Ó¿ÚA 
+	
+	public void a(){
+		
+	}
+	
+}
